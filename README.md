@@ -25,9 +25,9 @@ The video below is a brief demonstration of our mobile application running on Io
 
 ### Getting Started
 #### Editing Grapgical User Interface 
-  1. Setup IDE
-  2. Download file from [Gui-Code.md](https://github.com/mruballos/CPPinpoint/tree/master/GUI-Code)
-  3. Open gui file within IDE and edit it
+  1. Setup IDE listed in "Prerequisites"
+  2. Download file from [Gui-Code.md](https://github.com/mruballos/CPPinpoint/tree/master/GUI-Code) 
+  3. Open gui file within IDE and contribute 
   
   To view an example, visit [GUI_EX.md](https://github.com/mruballos/CPPinpoint/blob/master/GUI_EX.md)
 
@@ -44,7 +44,6 @@ This project is licensed under the Apache License - see the [License.md](License
 
 ##### Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+* Thanks to anyone whose code was used
+
 
