@@ -1,0 +1,138 @@
+<ion-view view-title="Campaign Information" cache-view="false">
+<ion-header>
+
+    <div class="bar bar-header bar-calm">
+    <ion-navbar>
+        <ion-title>Campaign Information</ion-title>
+        <div class="right" end>
+        <a href="#/app/campaigns" class="button icon ion-android-arrow-back" side="right" end></a>
+      <!--  <button class="button icon ion-plus-circled" side="right"  href="#/app/campaigndetail" end>-->
+            <!--</button>-->
+            </div>
+        </ion-navbar>
+        </div>
+    </ion-header>
+    
+    
+    <ion-content class="has-header">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+        
+       <!--Card Style-->
+        <style>
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 94%;
+            border-radius: 5px;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+
+        .container {
+            padding: 2px 16px;
+        }
+        </style>
+
+    <!--Padding Starts Here-->
+    <ion-item>        
+    <!--Cards Start Here-->  
+        
+        <!--Details Card-->
+        <div class="card">
+            
+        <div class="item item-divider">
+            Details
+        </div>
+        <div class="item item-text-wrap">
+            <strong> Name:</strong><br> Campagin Test 1
+        </div>
+            
+        <div class="item item-text-wrap">
+            <strong>Type: </strong><br> Standard
+        </div>
+        
+        <div class="item item-text-wrap">
+            <strong>Holdout: </strong><br> 0%
+        </div>
+                
+        </div>
+        
+        <!--Message Card-->
+        <div class="card">
+            
+        <div class="item item-divider">
+            Message
+        </div>
+        <div class="item item-text-wrap">
+            <strong>Title: </strong><br> Amazon Discount Code
+        </div>
+            
+        <div class="item item-text-wrap">
+            <strong>Message: </strong><br> The first 50 people to put in the code, 555, gets a free iPhone USB Charger.
+        </div>
+        
+        <div class="item item-text-wrap">
+            <strong>Action: </strong><br> Open App
+        </div>
+                
+        </div>
+        
+        <!--Schedule Card-->
+        <div class="card">
+            
+        <div class="item item-divider">
+            Schedule
+        </div>
+        <div class="item item-text-wrap">
+            <strong>Start:</strong> <br> May 29th 2017, 0:00
+        </div>
+            
+        <div class="item item-text-wrap">
+            <strong>Frequency:</strong> <br> Once
+        </div>
+        
+        <div class="item item-text-wrap">
+            <strong>Status: </strong><br> Completed
+        </div>
+                
+        </div>
+        
+        <!--Segment Card-->
+        <div class="card">
+            
+        <div class="item item-divider">
+            Segment
+        </div>
+        <div class="item item-text-wrap">
+            <strong>Usage: </strong><br> 30 Days
+        </div>
+            
+        <div class="item item-text-wrap">
+            <strong>Filter: </strong><br> None
+        </div>
+                
+        </div>
+        
+<!--Buttons-->   
+        <br><hr>
+         &nbsp; <a href="#/app/campaigndetail"><button class="button button-stable padding">Copy to new campaign</button></a>  &nbsp;
+        <button class="button button-stable padding">Delete campaign</button> <br> <br>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <a href="#/app/campaignanalytics"><button class="button button-stable padding">Campaign Analytics
+        </button></a>
+        <br><br><br><br>
+      </ion-item>
+    
+</ion-content>
+     <style>
+    ion-item.item-input {
+    padding-left: 10;
+}
+    </style> 
+</ion-view>

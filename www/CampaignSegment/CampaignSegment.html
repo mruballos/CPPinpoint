@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+    <div class="bar bar-header bar-calm">
+	<h1 class="title">Create Segment</h1>
+</div>
+<ion-content class="has-header">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    
+<Title>Create Campaign: Step 2</Title>
+    
+    
+<style> /* Progress Tracker v2 */
+ol.progress[data-steps="2"] li { width: 49%; }
+ol.progress[data-steps="3"] li { width: 33%; }
+ol.progress[data-steps="4"] li { width: 24%; }
+ol.progress[data-steps="5"] li { width: 19%; }
+ol.progress[data-steps="6"] li { width: 16%; }
+ol.progress[data-steps="7"] li { width: 14%; }
+ol.progress[data-steps="8"] li { width: 12%; }
+ol.progress[data-steps="9"] li { width: 11%; }
+
+.progress {
+    width: 100%;
+    list-style: none;
+    list-style-image: none;
+    margin: 20px 0 20px 0;
+    padding: 0;
+}
+
+.progress li {
+    float: left;
+    text-align: center;
+    position: relative;
+}
+
+.progress .name {
+    display: block;
+    vertical-align: bottom;
+    text-align: center;
+    margin-bottom: 1em;
+    color: black;
+    opacity: 0.3;
+}
+
+.progress .step {
+    color: black;
+    border: 3px solid silver;
+    background-color: silver;
+    border-radius: 50%;
+    line-height: 1.4;
+    width: 1.8em;
+    height: 1.8em;
+    display: inline-block;
+    z-index: 0;
+}
+
+.progress .step span {
+    opacity: 0.3;
+}
+
+.progress .active .name,
+.progress .active .step span {
+    opacity: 1;
+}
+
+.progress .step:before {
+    content: "";
+    display: block;
+    background-color: silver;
+    height: 0.4em;
+    width: 50%;
+    position: absolute;
+    bottom: 0.6em;
+    left: 0;
+    z-index: -1;
+}
+
+.progress .step:after {
+    content: "";
+    display: block;
+    background-color: silver;
+    height: 0.4em;
+    width: 50%;
+    position: absolute;
+    bottom: 0.6em;
+    right: 0;
+    z-index: -1;
+}
+
+.progress li:first-of-type .step:before {
+    display: none;
+}
+
+.progress li:last-of-type .step:after {
+    display: none;
+}
+
+.progress .done .step,
+.progress .done .step:before,
+.progress .done .step:after,
+.progress .active .step,
+.progress .active .step:before {
+    background-color: yellowgreen;
+}
+
+.progress .done .step,
+.progress .active .step {
+    border: 3px solid yellowgreen;
+}
+</style>  
+
+    
+</head>    
+    
+
+<body> 
+    <ion-item>
+<div>
+     <!-- Progress Tracker v2 -->
+<ol class="progress" data-steps="5">
+    <li class="done">
+        <span class="name">Details</span>
+        <span class="step"><span>1</span></span>
+    </li>
+    <li class="active">
+        <span class="name">Segment</span>
+        <span class="step"><span>2</span></span>
+    </li>
+    <li>
+        <span class="name">Message</span>
+        <span class="step"><span>3</span></span>
+    </li>
+    <li>
+        <span class="name">Schedule</span>
+        <span class="step"><span>4</span></span>
+    </li>
+    <li>
+        <span class="name">Review</span>
+        <span class="step"><span>5</span></span>
+    </li>
+</ol>
+    </div>
+    <br><br>
+   
+<form>
+    <br><br>
+    <div class="row" ng-controller="CampaignSegmentCtrl">
+        <div class="col text-center">
+    <!--This shows what page we are on-->
+     <button class="button button-stable padding" style="width:350px"
+     ng-model="button.a" 
+     ng-click="select(button.a)" 
+     ng-class="button.a.clicked?'button-dark':'button-stable'">Create a New Segment</button><br><br>
+        
+    <a href="#/app/previoussegment"><button class="button button-stable padding" style="width:350px">Use a Previously Defined Segment</button></a>
+    <br><br>
+    </div>
+    </div>
+    <h3>Name your segment to reuse later:</h3>
+        <label class="item item-input">
+    <input type="text">
+    </label>
+        <br><hr><br>
+    
+    Segment Estimate:<br>(insert estimate percent)<br><br><br><br>
+    
+    <h3>App Usage Criteria:</h3>
+    Has
+    <select>
+    <option id="Used" value="used">used</option>
+    <option id="NotUsed" vlaue="not used">not used</option></select>
+    the app in the last
+    <select>
+    <option id="1Day" value="1 Day">1 Day</option>
+    <option id="7Day" value="7 Day">7 Days</option>
+    <option id="14Day" value="14 Day">14 Days</option>
+    <option id="30Day" value="30 Day">30 Days</option>
+    <option id="AllTime" value="All Time">All Time</option></select>
+    <br>
+    <br>
+    <br>
+    <h3>Filter by device attributes</h3>
+    <label class="item item-input">
+    <input id="DeviceAttribute" type="text">
+    </label>
+    <br>
+    <h3>Filter by custom attributes</h3>
+    <label class="item item-input">
+    <input id="CustomAttribute" type="text">
+    </label>
+    <br>
+    <h3>Filter by custom user attributes</h3>
+    <label class="item item-input">
+    <input id="UserAttribute" type="text">
+    </label>
+    </form>
+        
+        <br><hr><br> <h3>Holdout</h3>
+    <div class="range range-assertive" >
+    <i class="icon ion-ios7-sunny-outline"></i>
+    <input id="SegmentHoldout" type="range" min="0" max="99" value="user.value" step="1" ng-model="user.value">
+    {{user.value}}
+    {{user.max}}
+    <i class="icon ion-ios7-sunny"></i>
+    </div><br><hr>
+        
+    <br>
+    <a href="#/app/campaigns"><button class="button button-stable padding">Cancel</button></a>
+    <a href="#/app/campaigndetail"><button class="button button-stable padding">Back</button></a>
+    <a href="#/app/campaignmessage"><button class="button button-stable padding">Next Step</button></a>
+    <br><br><br><br>
+        </ion-item>
+    </body>  
+    </ion-content>
+     <style>
+    ion-item.item-input {
+    padding-left: 10;
+}
+    </style>
+    </html>

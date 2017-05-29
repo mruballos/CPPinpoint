@@ -1,0 +1,146 @@
+<ion-view view-title="Campaign Analytics" cache-view="false">
+<ion-header>
+
+    <div class="bar bar-header bar-calm">
+    <ion-navbar>
+        <ion-title>Campaign Analytics</ion-title>
+        <div class="right" end>
+        <a href="#/app/analytics" class="button icon ion-android-arrow-back" side="right" end></a>
+      <!--  <button class="button icon ion-plus-circled" side="right"  href="#/app/campaigndetail" end>-->
+            <!--</button>-->
+            </div>
+        </ion-navbar>
+        </div>
+    </ion-header>
+    
+    
+    <ion-content class="has-header">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+        
+       <!--Card Style-->
+        <style>
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 94%;
+            border-radius: 5px;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+
+        .container {
+            padding: 2px 16px;
+        }
+        </style>
+
+    <!--Padding Starts Here-->
+    <ion-item>        
+    <!--Cards Start Here-->  
+        
+        <h3>Last 30 Days:</h3>
+        <label class="item item-input">
+    <input id="StartDate" type="date">
+    </label>
+  
+    <div class="card">
+        <div class="item item-divider">
+            Active Users
+        </div>
+        <div class="item item-text-wrap">
+            0 <br>
+        </div>
+    </div>
+        
+    <div class="card">
+        <div class="item item-divider">
+            Delivered
+        </div>
+        <div class="item item-text-wrap">
+            0 <br>
+        </div>
+    </div>
+        
+     <div class="card">
+        <div class="item item-divider">
+            Open rate
+        </div>
+        <div class="item item-text-wrap">
+            0% <br>
+        </div>
+    </div>
+    
+     <div class="card">
+        <div class="item item-divider">
+            Opt out rate
+        </div>
+        <div class="item item-text-wrap">
+            0% <br>
+        </div>
+    </div>
+        
+     <div class="card">
+        <div class="item item-divider">
+            Campaign Name
+        </div>
+        <div class="item item-text-wrap">
+            Campaign Test 1 <br>
+        </div>
+         
+         <div class="item item-divider">
+            Type
+        </div>
+        <div class="item item-text-wrap">
+            Standard <br>
+        </div>
+         
+         <div class="item item-divider">
+            Schedule
+        </div>
+        <div class="item item-text-wrap">
+            Once <br>
+        </div>
+         
+         <div class="item item-divider">
+            User devices messaged
+        </div>
+        <div class="item item-text-wrap">
+            0 <br>
+        </div>
+         
+         <div class="item item-divider">
+            Delivered
+        </div>
+        <div class="item item-text-wrap">
+            0 <br>
+        </div>
+         
+         <div class="item item-divider">
+            Open rate
+        </div>
+        <div class="item item-text-wrap">
+            0% <br>
+        </div>
+         
+    </div>
+        
+<!--Buttons-->   
+        <br><hr>
+        <button class="button button-stable padding">Refresh</button>
+        <button class="button button-stable padding">Campaigns</button>
+        <br><br><br><br>
+      </ion-item>
+    
+</ion-content>
+     <style>
+    ion-item.item-input {
+    padding-left: 10;
+}
+    </style> 
+</ion-view>
