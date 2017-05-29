@@ -13,4 +13,4 @@ An overview of all collected analytical data that application is applied to. <br
         </div>
     </div>
 ```
-Above is a div that contains hard coded data for the Average MAU. This is a place holder for an API call that will extract data from the pinpoint API. This line of code can be found on [overview.html](https://github.com/mruballos/CPPinpoint/blob/master/GUICoding/Overview/overview.html)
+Above is a div that contains hard coded data for the Average MAU. This is a place holder for an API call that will extract data from the pinpoint API. 
