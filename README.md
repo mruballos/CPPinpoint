@@ -29,7 +29,7 @@ The video below is a brief demonstration of our mobile application running on Io
   2. Download file from [Gui-Code.md](https://github.com/mruballos/CPPinpoint/tree/master/GUI-Code)
   3. Open gui file within IDE and edit it
   
-  To view an example, visit [GUI_EX.md](https://github.com/mruballos/CPPinpoint/tree/master/GUICoding)
+  To view an example, visit [GUI_EX.md](https://github.com/mruballos/CPPinpoint/blob/master/GUI_EX.md)
 
 ##### Authors
 
