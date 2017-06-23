@@ -7,9 +7,9 @@ Install
 * [Brackets](http://brackets.io/) (Primarily used) 
 
 * Download either available version from [Node.js](https://nodejs.org/en/)
-```
     - Open Terminal/Command Prompt 
      - Run commands...
+```
       - npm install npm@latest -g
        - npm -v (to check version)
 ```
