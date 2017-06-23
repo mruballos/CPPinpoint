@@ -3,16 +3,16 @@
 Our goal is to create an Amazon Pinpoint mobile application that exposes a Web Console and API to manage Pinpoint resources, track app usage and evaluate the performance of push notification campaigns. The primary goal will be to quickly get information on a app trends, segments and campaign performance with a secondary goal of taking action.
 
 ### Prerequisites
-
-Choose Compatable IDEs for Ionic
-* [Brackets](http://brackets.io/) (Primarily used) 
-* [Atom](https://atom.io/)
-* [Visual Studio Code](https://code.visualstudio.com/)
-* [WebStorm](https://www.jetbrains.com/webstorm/)
-
-
 Install 
+* [Brackets](http://brackets.io/) (Primarily used) 
 
+* Download either available version from [Node.js](https://nodejs.org/en/)
+```
+    - Open Terminal/Command Prompt 
+     - Run commands...
+      - npm install npm@latest -g
+       - npm -v (to check version)
+```
 
 * Ionic Framework
     - Android ver. on Windows
@@ -24,26 +24,6 @@ ionic start apex tabs
 cd apex
 ionic serve
 ```
-
-    - iOS ver. on MAC
-     - Open Terminal
-      - Run commands...
-```
-        $ sudo npm install -g cordova
-        $ sudo npm install -g ionic
-        $ ionic start apex tabs
-        $ cd todo && ls
-```
-
-* Download either available version from [Node.js](https://nodejs.org/en/)
-    - Open Terminal/Command Prompt 
-     - Run commands...
-      - npm install npm@latest -g
-       - npm -v (to check version)
-
-
-* [AWS SDK for JavaScript](https://aws.amazon.com/sdk-for-node-js/)
-
 
 
 ### Demo 
