@@ -13,9 +13,11 @@ Install
 npm install npm@latest -g
 npm -v (to check version)
 
-* create [AWS-API](https://github.com/mruballos/CPPinpoint/blob/master/AWS-API)
+
 
 ```
+Create a text document with the following information:
+* [AWS-API](https://github.com/mruballos/CPPinpoint/blob/master/AWS-API)
 
 * Ionic Framework
     - Android ver. on Windows
