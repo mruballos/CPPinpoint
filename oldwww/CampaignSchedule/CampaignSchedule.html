@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<div class="bar bar-header bar-calm">
+	<h1 class="title">Create Schedule</h1>
+</div>
+    <ion-content class="has-header">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    
+<Title>Create Campaign: Step 4</Title>
+
+    
+<style> /* Progress Tracker v2 */
+ol.progress[data-steps="2"] li { width: 49%; }
+ol.progress[data-steps="3"] li { width: 33%; }
+ol.progress[data-steps="4"] li { width: 24%; }
+ol.progress[data-steps="5"] li { width: 19%; }
+ol.progress[data-steps="6"] li { width: 16%; }
+ol.progress[data-steps="7"] li { width: 14%; }
+ol.progress[data-steps="8"] li { width: 12%; }
+ol.progress[data-steps="9"] li { width: 11%; }
+
+.progress {
+    width: 100%;
+    list-style: none;
+    list-style-image: none;
+    margin: 20px 0 20px 0;
+    padding: 0;
+}
+
+.progress li {
+    float: left;
+    text-align: center;
+    position: relative;
+}
+
+.progress .name {
+    display: block;
+    vertical-align: bottom;
+    text-align: center;
+    margin-bottom: 1em;
+    color: black;
+    opacity: 0.3;
+}
+
+.progress .step {
+    color: black;
+    border: 3px solid silver;
+    background-color: silver;
+    border-radius: 50%;
+    line-height: 1.4;
+    width: 1.8em;
+    height: 1.8em;
+    display: inline-block;
+    z-index: 0;
+}
+
+.progress .step span {
+    opacity: 0.3;
+}
+
+.progress .active .name,
+.progress .active .step span {
+    opacity: 1;
+}
+
+.progress .step:before {
+    content: "";
+    display: block;
+    background-color: silver;
+    height: 0.4em;
+    width: 50%;
+    position: absolute;
+    bottom: 0.6em;
+    left: 0;
+    z-index: -1;
+}
+
+.progress .step:after {
+    content: "";
+    display: block;
+    background-color: silver;
+    height: 0.4em;
+    width: 50%;
+    position: absolute;
+    bottom: 0.6em;
+    right: 0;
+    z-index: -1;
+}
+
+.progress li:first-of-type .step:before {
+    display: none;
+}
+
+.progress li:last-of-type .step:after {
+    display: none;
+}
+
+.progress .done .step,
+.progress .done .step:before,
+.progress .done .step:after,
+.progress .active .step,
+.progress .active .step:before {
+    background-color: yellowgreen;
+}
+
+.progress .done .step,
+.progress .active .step {
+    border: 3px solid yellowgreen;
+}
+</style>  
+
+    
+</head>    
+    
+
+<body> 
+    <ion-item>
+<div>
+     <!-- Progress Tracker v2 -->
+<ol class="progress" data-steps="5">
+    <li class="done">
+        <span class="name">Details</span>
+        <span class="step"><span>1</span></span>
+    </li>
+    <li class="done">
+        <span class="name">Segment</span>
+        <span class="step"><span>2</span></span>
+    </li>
+    <li class="done">
+        <span class="name">Message</span>
+        <span class="step"><span>3</span></span>
+    </li>
+    <li class="active">
+        <span class="name">Schedule</span>
+        <span class="step"><span>4</span></span>
+    </li>
+    <li>
+        <span class="name">Review</span>
+        <span class="step"><span>5</span></span>
+    </li>
+</ol>
+    </div>
+    <br><br>
+   
+<form>
+    <br><br>
+    <br><br>
+     <div ng-controller="CampaignScheduleCtrl" class="row">
+    <div class="col text-center">
+     <button class="button button-stable padding"
+    id="Immediate"
+     ng-model="button.a" 
+     ng-click="select(button.a); show = false;" 
+     ng-class="button.a.clicked?'button-dark':'button-stable'" style="width:150px">Immediate</button>
+     <button class="button button-stable padding" 
+     id="Once"
+    ng-model="button.b" 
+    ng-click="select(button.b); show = false;" 
+    ng-class="button.b.clicked?'button-dark':'button-stable'" style="width:150px">Once</button><br>
+    <button class="button button-stable padding"
+    id="Hourly"
+    ng-model="button.c" 
+    ng-click="select(button.c); show = false;" 
+    ng-class="button.c.clicked?'button-dark':'button-stable'" style="width:150px">Hourly</button>
+    <button class="button button-stable padding"
+    id="Daily"
+    ng-model="button.d" 
+    ng-click="select(button.d); show = false;" 
+    ng-class="button.d.clicked?'button-dark':'button-stable'" style="width:150px">Daily</button><br>
+    <button class="button button-stable padding"
+    id="Weekly"
+    ng-model="button.e" 
+    ng-click="select(button.e); show = false;" 
+    ng-class="button.e.clicked?'button-dark':'button-stable'" style="width:150px">Weekly</button>
+    <button class="button button-stable padding"
+    id="Monthly"
+    ng-model="button.f" 
+    ng-click="select(button.f); show = false;" 
+    ng-class="button.f.clicked?'button-dark':'button-stable'" style="width:150px">Monthly</button><br>
+    
+    <br><br>
+        </div>
+    </div>
+    
+    <!--Start-->
+    <h3>Start:</h3>
+        <label class="item item-input">
+    <input id="StartDate" type="date">
+    </label>
+        <label class="item item-input">
+    <input id="StartTime" type="time">
+    </label>
+    
+    <!--Timezone Option-->
+    <label class = "item item-input item-select">
+   <div class = "input-label">
+      Time Zone
+   </div>
+   <select>
+      <option selected value="1">UTC+00:00 (GMT, WET, UTC)</option>
+    <option value="2">UTC+01:00 (CET, WET, WEDT)</option>
+    <option value="3">UTC+02:00(CAT, EET, CEDT,SAST)</option>
+    <option value="4">UTC+03:00(AST, EAT, EEDT, MSK, IDT)</option>
+    <option value="5">UTC+03:30(IRST)</option>
+    <option value="6">UTC+04:00(GST, GET, VOLT)</option>
+    <option value="7">UTC+04:30(AFT, IRDT)</option>
+    <option value="8">UTC+05:00(PKT, TJT, TMT, UZT)</option>
+    <option value="9">UTC+05:30(IST, SLST)</option>
+    <option value="10">UTC+05:45(NPT)</option>
+    <option value="11">UTC+06:00(BST, KGT, VOST)</option>
+    <option value="12">UTC+06:30(MST)</option>
+    <option value="13">UTC+07:00(THA, ICT, KRAT)</option>
+    <option value="14">UTC+08:00(HKT, CST, CT, MST, PST, SST)</option>
+    <option value="15">UTC+09:00(JST, EIT, KST, YAKT)</option>
+    <option value="16">UTC+09:30(ACST)</option>
+    <option value="17">UTC+10:00(AEST, VLAST, PGT)</option>
+    <option value="18">UTC+10:30(ACDT)</option>
+    <option value="19">UTC+11:00(AEDT)</option>
+    <option value="20">UTC+12:00(NZST)</option>
+    <option value="21">UTC+13:00(NZDT)</option>
+    <option value="22">UTC-02:00(BRST, UYST)</option>
+    <option value="23">UTC-03:00(ADT, BRT, ART, UYT)</option>
+    <option value="24">UTC-04:00(EDT, CLT, AST, VET)</option>
+    <option value="25">UTC-05:00(EST, CDT, COT, PET)</option>
+    <option value="26">UTC-06:00(CST, MDT)</option>
+    <option value="27">UTC-07:00(MST, PDT)</option>
+    <option value="28">UTC-08:00(PST, AKDT)</option>
+    <option value="29">UTC-09:00(AKST)</option>
+    <option value="30">UTC-10:00(HST)</option>
+    <option value="30">UTC-10:00(HST)</option>
+   </select>
+</label>
+  
+    <li class="item item-checkbox">
+   <h3>User's local Time</h3>
+   <label class="checkbox">
+   <input id="LocalTime" type="checkbox">
+   </label>
+</li>
+    
+    
+    <!--End-->
+    <br><br>
+    <h3>End:</h3>
+        <label class="item item-input">
+    <input id="endDate" type="date">
+    </label>
+        <label class="item item-input">
+    <input id="EndTime" type="time">
+    </label>
+    
+  
+        <br><br>
+    <h3>Quiet Time Start (Optional)</h3>
+    <label class="item item-input">
+    <input id="QuietTimeStart" type="time">
+    </label>
+    <br><br>
+    <h3>Quiet Time End (Optional)</h3>
+    <label class="item item-input">
+    <input id="QuietTimeEnd" type="time">
+    </label>
+    
+   
+    </form>
+        
+    <br>
+        <hr>
+    <a href="#/app/campaigns"><button class="button button-stable padding">Cancel</button></a>
+    <a href="#/app/campaignmessage"><button class="button button-stable padding">Back</button></a>
+    <a href="#/app/campaignreview"><button class="button button-stable padding">Next Step</button></a>
+    <br><br><br><br>
+        </ion-item>
+    </body> 
+    </ion-content>
+    <style>
+    ion-item.item-input {
+    padding-left: 10;
+}
+    </style> 
+    </html>

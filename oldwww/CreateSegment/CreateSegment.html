@@ -1,0 +1,164 @@
+<ion-view view-title="Create Segment" cache-view="false">
+<ion-header>
+    <div class="bar bar-header bar-calm">
+		<ion-navbar>
+		<ion-title>Create Segment</ion-title>
+		<!-- <button class="button icon ion-arrow-back" side="left" ng-click="myGoBack()" start> -->
+		<div class="right" end>
+		<a href="#/app/segments" class="button icon ion-android-arrow-back" side="right" end>
+		</a></div>
+	</ion-navbar></div>
+</ion-header>
+
+	<ion-content class="has-header">
+	<ion-item>
+    <form id="createSegment-form7" class="list">
+      <div id="createSegment-markdown2" class="show-list-numbers-and-dots">
+        <p style="color:#000000;">
+          <strong>Segment name</strong>
+        </p>
+      </div>
+      <label class="item item-input" id="createSegment-input7">
+        <span class="input-label">Name your segment</span>
+        <input type="text" placeholder="">
+      </label>
+    </form>
+    <div id="createSegment-markdown3" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">
+        <strong>How would you like to define your segment?</strong>
+      </p>
+    </div>
+    <div id="createSegment-button-bar1" class="button-bar">
+      <button id="createSegment-button4"
+			class="button button-positive button-block"
+			ng-model="button.a" 
+			ng-click="check(button.a);" 
+			ng-class="button.a.clicked?'button-dark':'button-stable'">Build Segment</button>
+      <button id="createSegment-button5"
+			class="button button-positive button-block"
+			ng-model="button.b" 
+			ng-click="check(button.b);" 
+			ng-class="button.b.clicked?'button-dark':'button-stable'">Import Segment</button>
+    </div>
+	<div id="buildSegment" ng-show="show" ng-hide="hide">
+		<div id="createSegment-markdown1" class="show-list-numbers-and-dots">
+		  <p style="color:#00FF00;">Segment estimate</p>
+
+		  <p style="color:#00FF00;">0% 0 monthly active users</p>
+		</div>
+		<br>
+		<form id="createSegment-form9" class="list">
+		  <div id="createSegment-markdown5" class="show-list-numbers-and-dots">
+			<p style="color:#000000;">
+			  <strong>App usage criteria</strong>
+			</p>
+		  </div>
+			<select>
+			  <option>Has used</option>
+			  <option>Has not used</option>
+			</select>
+		  the app in the last
+		  <select>
+			  <option>1 day.</option>
+			  <option>7 days.</option>
+			  <option>14 days.</option>
+			  <option>30 days.</option>
+			  <option>all time.</option>
+			</select>
+		</form>
+		<form id="createSegment-form10" class="list">
+		  <div id="createSegment-markdown8" class="show-list-numbers-and-dots">
+			<p style="color:#000000;">
+			  <strong>Filter by device attributes</strong>
+			</p>
+		  </div>
+		  <label class="item item-input" id="createSegment-input12">
+			<span class="input-label">+</span>
+			<input type="text" placeholder="">
+		  </label>
+		</form>
+		<form id="createSegment-form11" class="list">
+		  <div id="createSegment-markdown10" class="show-list-numbers-and-dots">
+			<p style="color:#000000;">
+			  <strong>Filter by custom attributes</strong>
+			</p>
+		  </div>
+		  <label class="item item-input" id="createSegment-input13">
+			<span class="input-label">+</span>
+			<input type="text" placeholder="">
+		  </label>
+		</form>
+		<form id="createSegment-form12" class="list">
+		  <div id="createSegment-markdown11" class="show-list-numbers-and-dots">
+			<p style="color:#000000;">
+			  <strong>Filter by custom user attributes</strong>
+			</p>
+		  </div>
+		  <label class="item item-input" id="createSegment-input14">
+			<span class="input-label">+</span>
+			<input type="text" placeholder="">
+		  </label>
+		</form>
+	</div>
+	<div id="importSegment"ng-show="hide" ng-hide="show">
+	<form id="createSegment-form13" class="list">
+		  <div id="createSegment-markdown13" class="show-list-numbers-and-dots">
+			<p style="color:#000000;">
+			  <strong>Amazon S3 URL</strong>
+			</p>
+		  </div>
+		  <label class="item item-input" id="createSegment-input12">
+			<span class="input-label">s3://{bucket-name}/{folder}</span>
+			<input type="text" placeholder="">
+		  </label>
+		</form>
+		<form id="createSegment-form14" class="list">
+		  <div id="createSegment-markdown14" class="show-list-numbers-and-dots">
+			<p style="color:#000000;">
+			  <strong>IAM Role ARN</strong>
+			</p>
+		  </div>
+		  <label class="item item-input" id="createSegment-input13">
+			<span class="input-label">arn:aws:iam::{account-id}:role/{role-name}</span>
+			<input type="text" placeholder="">
+		  </label>
+		</form>
+		<form id="createSegment-form15" class="list">
+		  <div id="createSegment-markdown15" class="show-list-numbers-and-dots">
+			<p style="color:#000000;">
+			  <strong>External ID</strong>
+			</p>
+		  </div>
+		  <label class="item item-input" id="createSegment-input14">
+			<span class="input-label">External ID</span>
+			<input type="text" placeholder="">
+		  </label>
+		</form>
+		<div id="createSegment-markdown4" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">
+        <strong>What is the format of the file?</strong>
+      </p>
+    </div>
+    <div id="createSegment-button-bar2" class="button-bar">
+      <button id="createSegment-button6"
+			class="button button-positive button-block"
+			ng-model="button.c" 
+			ng-click="select(button.c);"
+			ng-class="button.c.clicked?'button-dark':'button-stable'">CSV</button>
+      <button id="createSegment-button7"
+			class="button button-positive button-block"
+			ng-model="button.d" 
+			ng-click="select(button.d);"
+			ng-class="button.d.clicked?'button-dark':'button-stable'">JSON</button>
+    </div>
+	</div>
+	<a href="#/app/segments">
+	<button id="createSegment-button13" class="button button-positive button-block">Create Segment</button></a>
+	</ion-item>
+  </ion-content>
+</ion-view>
+<style>
+    ion-item.item-input {
+    padding-left: 10;
+}
+    </style>

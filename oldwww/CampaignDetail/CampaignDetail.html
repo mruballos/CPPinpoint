@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<ion-view view-title="Create Campaign" cache-view="false">
+<html>
+    <div class="bar bar-header bar-calm">
+	<h1 class="title">Create Campaign</h1>
+</div>
+<ion-content class="has-header">
+<head>
+    
+<Title>Create Campaign: Step 1</Title> 
+    
+<style> /* Progress Tracker v2 */
+ol.progress[data-steps="2"] li { width: 49%; }
+ol.progress[data-steps="3"] li { width: 33%; }
+ol.progress[data-steps="4"] li { width: 24%; }
+ol.progress[data-steps="5"] li { width: 19%; }
+ol.progress[data-steps="6"] li { width: 16%; }
+ol.progress[data-steps="7"] li { width: 14%; }
+ol.progress[data-steps="8"] li { width: 12%; }
+ol.progress[data-steps="9"] li { width: 11%; }
+
+.progress {
+    width: 100%;
+    list-style: none;
+    list-style-image: none;
+    margin: 20px 0 20px 0;
+    padding: 0;
+}
+
+.progress li {
+    float: left;
+    text-align: center;
+    position: relative;
+}
+
+.progress .name {
+    display: block;
+    vertical-align: bottom;
+    text-align: center;
+    margin-bottom: 1em;
+    color: black;
+    opacity: 0.3;
+}
+
+.progress .step {
+    color: black;
+    border: 3px solid silver;
+    background-color: silver;
+    border-radius: 50%;
+    line-height: 1.4;
+    width: 1.8em;
+    height: 1.8em;
+    display: inline-block;
+    z-index: 0;
+}
+
+.progress .step span {
+    opacity: 0.3;
+}
+
+.progress .active .name,
+.progress .active .step span {
+    opacity: 1;
+}
+
+.progress .step:before {
+    content: "";
+    display: block;
+    background-color: silver;
+    height: 0.4em;
+    width: 50%;
+    position: absolute;
+    bottom: 0.6em;
+    left: 0;
+    z-index: -1;
+}
+
+.progress .step:after {
+    content: "";
+    display: block;
+    background-color: silver;
+    height: 0.4em;
+    width: 50%;
+    position: absolute;
+    bottom: 0.6em;
+    right: 0;
+    z-index: -1;
+}
+
+.progress li:first-of-type .step:before {
+    display: none;
+}
+
+.progress li:last-of-type .step:after {
+    display: none;
+}
+
+.progress .done .step,
+.progress .done .step:before,
+.progress .done .step:after,
+.progress .active .step,
+.progress .active .step:before {
+    background-color: yellowgreen;
+}
+
+.progress .done .step,
+.progress .active .step {
+    border: 3px solid yellowgreen;
+}
+</style>    
+    
+<style>
+    #myDIV {
+    width: 100%;
+    padding: 40px 0;
+    margin-top:10px;
+}
+    </style>
+</head>    
+    
+
+<body> 
+ <!--Padding-->
+       <ion-item>
+<div>
+     <!-- Progress Tracker v2 -->
+<ol class="progress" data-steps="5">
+    <li class="active">
+        <span class="name">Details</span>
+        <span class="step"><span>1</span></span>
+    </li>
+    <li>
+        <span class="name">Segment</span>
+        <span class="step"><span>2</span></span>
+    </li>
+    <li>
+        <span class="name">Message</span>
+        <span class="step"><span>3</span></span>
+    </li>
+    <li>
+        <span class="name">Schedule</span>
+        <span class="step"><span>4</span></span>
+    </li>
+    <li>
+        <span class="name">Review</span>
+        <span class="step"><span>5</span></span>
+    </li>
+</ol>
+    </div>
+    <br><br><br>
+<form>
+    <br><br><br>
+     <!--Campaign Name Field  -->     
+    <h3>Name your Campaign:</h3>   
+    <label class="item item-input">
+    <input id="CampaignName" type="text">
+    </label>
+    <br>
+    <hr>
+    <br><br>
+   
+    <!--Campaign Buttons-->
+    <h3>Choose the type of your campaign:</h3>
+  <div ng-controller="CampaignDetailCtrl" padding>
+    <button
+    id="StandardCampaign"
+    class="button button-stable padding" 
+    ng-model="button.a" 
+    ng-click="select(button.a); show = false;" 
+    ng-class="button.a.clicked?'button-dark':'button-stable'">
+    Standard Campaign
+    </button>
+   
+    <!--OnClick Button-->
+    <button 
+    id="A/BTest"
+    class="button button-stable padding"
+    ng-model="button.b" 
+    ng-click="select(button.b); toggleCustom(); show = true;" 
+    ng-class="button.b.clicked?'button-dark':'button-stable'"       >
+    A/B Test
+    </button>
+    <br><br>
+
+    <!--Dropdown buttons-->
+    <div>    
+    <h3><p ng-show="show" 
+       ng-hide="custom"
+      >Choose what you will test for</p></h3><br>
+    <button 
+    id="MessageButton"
+    class="button button-stable padding"
+    ng-show="show"
+    ng-hide="custom"
+   >Message</button>
+    <button
+    id="ScheduleButton"
+    class="button button-stable padding"
+    ng-show="show"
+    ng-hide="custom"
+    >Schedule</button>
+    </div><br>
+    </div>
+    
+    </form>  
+           <hr>
+           <a href="#/app/campaigns"><button class="button button-stable padding">Cancel</button></a>
+    <a href="#/app/campaignsegment"><button class="button button-stable padding">Next Step</button></a>
+           <br><br><br>
+    </ion-item>
+    </body>  
+    </ion-content>
+    <style>
+    ion-item.item-input {
+    padding-left: 10;
+}
+    </style> 
+    </html>
