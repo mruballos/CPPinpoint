@@ -15,13 +15,23 @@ Install
 
 
 * Ionic Framework
+    - Android ver. on Windows
+     - Open command prompt
+      - Run commands...
+```
+npm install -g cordova ionic
+ionic start apex tabs
+cd apex
+ionic serve
+```
+
     - iOS ver. on MAC
      - Open Terminal
       - Run commands...
 ```
         $ sudo npm install -g cordova
         $ sudo npm install -g ionic
-        $ ionic start []
+        $ ionic start apex tabs
         $ cd todo && ls
 ```
 
