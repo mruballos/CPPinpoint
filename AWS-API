@@ -1,0 +1,23 @@
+var AWS = require('aws-sdk');
+
+ 
+var config = {
+region:'us-east-1',
+accessKeyId: 'ACCESS KEY GOES',
+secretAccessKey: 'SECRET ACCESS KEY GOES HERE'
+}
+
+ 
+AWS.config.update(config);
+pin = new AWS.Pinpoint(config);
+ 
+var params = {
+  ApplicationId: 'APP ID GOES HERE', /* required */
+  PageSize: '10'
+};
+
+ 
+pin.getCampaigns(params, function(err, data) {
+  if (err) console.log('Error:' + err, err.stack);
+  else     console.log('Success: ' + JSON.stringify(data,null,2));
+});
