@@ -1,6 +1,6 @@
 # CPPinpoint
 
-Our goal is to create an Amazon Pinpoint mobile application that exposes a Web Console and API to manage Pinpoint resources, track app usage and evaluate the performance of push notification campaigns. The primary goal will be to quickly get information on a app trends, segments and campaign performance with a secondary goal of taking action.
+CPPinpoint is an easy to use mobile application designed to manage campaigns and segments for your selected application(s). Campaigns are used to send notifications to your application’s users to increase interactiveness.
 
 ### Getting Started
 Required Components:
@@ -56,6 +56,11 @@ The video below is a brief demonstration of our mobile application running on Io
 
 * **Kevin Chau** - *Initial work* - [Clockss](https://github.com/Clockss)
 * **Miguel Ruballos** - *Initial work* - [mruballos](https://github.com/mruballos)
+* **Jimmy Le** - *Initial work* - [jimmyle65](https://github.com/jimmyle65)
+* **Dan Hamilton** - *Initial work* - [dhamilton7](https://github.com/dhamilton7)
+* **Caleb Wong** - *Initial work* - [norsehorse89](https://github.com/norsehorse89)
+
+
 
 See also the list of [contributors](https://github.com/mruballos/CPPinpoint/graphs/contributors) who participated in this project.
 
