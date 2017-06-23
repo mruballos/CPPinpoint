@@ -12,6 +12,7 @@ Choose Compatable IDEs for Ionic
 
 
 Install 
+* [Ionic Framework](https:/https://ionicframework.com/getting-started/)
 * [Node.js](https://nodejs.org/en/)
 * [AWS SDK for JavaScript](https://aws.amazon.com/sdk-for-node-js/)
 
