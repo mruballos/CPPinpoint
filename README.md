@@ -15,15 +15,21 @@ Install
 
 
 * Ionic Framework
-    iOS ver. on MAC
-      - Open Terminal
+    - iOS ver. on MAC
+     - Open Terminal
       - Run commands...
         $ sudo npm install -g cordova
         $ sudo npm install -g ionic
-        $ ionic start todo --type [insert desired project name]
+        $ ionic start []
         $ cd todo && ls
         
-* [Node.js](https://nodejs.org/en/)
+* Download either available version from [Node.js](https://nodejs.org/en/)
+    - Open Terminal/Command Prompt 
+     - Run commands...
+      - npm install npm@latest -g
+       - npm -v (to check version)
+
+
 * [AWS SDK for JavaScript](https://aws.amazon.com/sdk-for-node-js/)
 
 
