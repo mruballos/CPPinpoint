@@ -18,12 +18,12 @@ Install
     - iOS ver. on MAC
      - Open Terminal
       - Run commands...
-...
+```
         $ sudo npm install -g cordova
         $ sudo npm install -g ionic
         $ ionic start []
         $ cd todo && ls
-...
+```
 
 * Download either available version from [Node.js](https://nodejs.org/en/)
     - Open Terminal/Command Prompt 
