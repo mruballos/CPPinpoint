@@ -2,7 +2,7 @@
 
 Our goal is to create an Amazon Pinpoint mobile application that exposes a Web Console and API to manage Pinpoint resources, track app usage and evaluate the performance of push notification campaigns. The primary goal will be to quickly get information on a app trends, segments and campaign performance with a secondary goal of taking action.
 
-### Prerequisites
+### Getting Started
 Install 
 * [Brackets](http://brackets.io/) (Primarily used) 
 
@@ -19,26 +19,26 @@ npm -v (to check version)
      - Open command prompt
       - Run commands...
 ```
+cd  desktop
+
 npm install -g cordova ionic
 ionic start apex tabs
 cd apex
 ionic serve
 ```
 
+#### Using the provided Graphical User Interface
+  1. Download file from [www](https://github.com/mruballos/CPPinpoint/tree/master/www) 
+  2. Open the newly created apex folder
+  3. Replace the www folder, 
+  
+  To view an example, visit [GUI_EX.md](https://github.com/mruballos/CPPinpoint/blob/master/GUI_EX.md)
 
 ### Demo 
 
 The video below is a brief demonstration of our mobile application running on Ionic framework. 
 
 [![ScreenShot](https://github.com/mruballos/CPPinpoint/blob/master/Screenshots/demo_screen.JPG)](https://www.youtube.com/watch?v=LhDFWAgg-DA)
-
-### Getting Started
-#### Editing Graphical User Interface 
-  1. Setup IDE listed in "Prerequisites"
-  2. Download file from [www](https://github.com/mruballos/CPPinpoint/tree/master/www) 
-  3. Open gui file within IDE and contribute 
-  
-  To view an example, visit [GUI_EX.md](https://github.com/mruballos/CPPinpoint/blob/master/GUI_EX.md)
 
 ##### Authors
 
