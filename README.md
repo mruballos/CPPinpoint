@@ -13,7 +13,7 @@ Install
 npm install npm@latest -g
 npm -v (to check version)
 
-create [AWS-API](https://github.com/mruballos/CPPinpoint/blob/master/AWS-API)
+* create [AWS-API](https://github.com/mruballos/CPPinpoint/blob/master/AWS-API)
 
 ```
 
