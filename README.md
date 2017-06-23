@@ -10,8 +10,8 @@ Install
     - Open Terminal/Command Prompt 
      - Run commands...
 ```
-      - npm install npm@latest -g
-       - npm -v (to check version)
+npm install npm@latest -g
+npm -v (to check version)
 ```
 
 * Ionic Framework
